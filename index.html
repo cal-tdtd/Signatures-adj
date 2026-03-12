@@ -32,6 +32,23 @@
         line-height: 1.5;
       }
 
+      .links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin: 0 0 32px;
+      }
+
+      .links a {
+        display: inline-block;
+        padding: 10px 14px;
+        border-radius: 999px;
+        background: #111;
+        color: #fff;
+        text-decoration: none;
+        font-size: 14px;
+      }
+
       .signature {
         background: #fff;
         border: 1px solid #ddd;
@@ -56,7 +73,12 @@
   <body>
     <main>
       <h1>ADJ Email Signatures</h1>
-      <p>This page hosts two signature image versions for publishing via GitHub Pages.</p>
+      <p>This page hosts two signature HTML pages and preview images for publishing via GitHub Pages.</p>
+
+      <div class="links">
+        <a href="signature.html">Open Signature 1 HTML</a>
+        <a href="signature-louis.html">Open Signature 2 HTML</a>
+      </div>
 
       <section class="signature">
         <h2>Signature 1</h2>
