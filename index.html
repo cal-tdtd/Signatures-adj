@@ -5,10 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ADJ Email Signatures</title>
     <style>
-      :root {
-        color-scheme: light;
-      }
-
       body {
         margin: 0;
         font-family: Arial, sans-serif;
@@ -17,29 +13,53 @@
       }
 
       main {
-        max-width: 960px;
+        max-width: 900px;
         margin: 0 auto;
-        padding: 40px 20px 64px;
+        padding: 32px 20px 56px;
       }
 
       h1 {
-        margin: 0 0 12px;
-        font-size: 32px;
+        margin: 0 0 10px;
+        font-size: 30px;
       }
 
       p {
-        margin: 0 0 32px;
         line-height: 1.5;
       }
 
-      .links {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 12px;
-        margin: 0 0 32px;
+      .note {
+        margin: 0 0 24px;
       }
 
-      .links a {
+      .grid {
+        display: grid;
+        gap: 20px;
+      }
+
+      .card {
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 12px;
+        padding: 20px;
+      }
+
+      .card h2 {
+        margin: 0 0 10px;
+        font-size: 18px;
+      }
+
+      .card p {
+        margin: 0 0 14px;
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin: 0 0 18px;
+      }
+
+      .actions a {
         display: inline-block;
         padding: 10px 14px;
         border-radius: 999px;
@@ -49,46 +69,61 @@
         font-size: 14px;
       }
 
-      .signature {
+      .preview {
         background: #fff;
-        border: 1px solid #ddd;
-        border-radius: 12px;
-        padding: 20px;
-        margin-bottom: 24px;
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+        border: 1px dashed #c7c7c7;
+        border-radius: 8px;
+        padding: 16px;
       }
 
-      .signature h2 {
-        margin: 0 0 16px;
-        font-size: 18px;
+      .steps {
+        margin: 24px 0 0;
+        padding-left: 18px;
       }
 
-      .signature img {
-        display: block;
-        width: 100%;
-        height: auto;
+      .steps li {
+        margin-bottom: 8px;
       }
     </style>
   </head>
   <body>
     <main>
       <h1>ADJ Email Signatures</h1>
-      <p>This page hosts two signature HTML pages and preview images for publishing via GitHub Pages.</p>
+      <p class="note">Best cross-app install path: open a rendered signature, copy the image, then paste it into your email app's signature editor.</p>
 
-      <div class="links">
-        <a href="signature.html">Open Signature 1 HTML</a>
-        <a href="signature-louis.html">Open Signature 2 HTML</a>
+      <div class="grid">
+        <section class="card">
+          <h2>Signature 1</h2>
+          <p>Use this for the main ADJ signature.</p>
+          <div class="actions">
+            <a href="signature.html">Open HTML Snippet</a>
+            <a href="https://raw.githubusercontent.com/cal-tdtd/Signatures-adj/main/adj-signature-1-email.png">Open Hosted Image</a>
+          </div>
+          <div class="preview">
+            <img src="adj-signature-1-email.png" alt="ADJ email signature" width="143" height="100" style="display:block;border:0;">
+          </div>
+        </section>
+
+        <section class="card">
+          <h2>Signature 2</h2>
+          <p>Use this for the Louis version.</p>
+          <div class="actions">
+            <a href="signature-louis.html">Open HTML Snippet</a>
+            <a href="https://raw.githubusercontent.com/cal-tdtd/Signatures-adj/main/adj-signature-louis-email.png">Open Hosted Image</a>
+          </div>
+          <div class="preview">
+            <img src="adj-signature-louis-email.png" alt="ADJ email signature for Louis" width="159" height="100" style="display:block;border:0;">
+          </div>
+        </section>
       </div>
 
-      <section class="signature">
-        <h2>Signature 1</h2>
-        <img src="adj-signature-1.png" alt="ADJ email signature">
-      </section>
-
-      <section class="signature">
-        <h2>Signature 2</h2>
-        <img src="adj-signature-louis-1.png" alt="ADJ email signature for Louis">
-      </section>
+      <ol class="steps">
+        <li>Push the latest files to GitHub so the hosted image URLs stay live.</li>
+        <li>Open the hosted image or local preview page in a browser.</li>
+        <li>Copy the rendered image, not the HTML source.</li>
+        <li>Paste it into the signature editor in Gmail, Outlook, Apple Mail, or Superhuman.</li>
+        <li>Send a test email to yourself and check desktop, mobile, reply, and forward views.</li>
+      </ol>
     </main>
   </body>
 </html>
